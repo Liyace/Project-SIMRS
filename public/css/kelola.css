@@ -1,0 +1,249 @@
+/* ============================================================
+   assets/css/kelola.css
+   Digunakan oleh: Kelola Layanan (kelola.index)
+   ============================================================ */
+
+.section-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+.btn-add-layanan {
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 9px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s ease;
+}
+
+.btn-add-layanan:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+
+/* ── TABEL KELOLA LAYANAN MODERN (SERASI DENGAN RIWAYAT & LAPORAN) ── */
+.kasir-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.kasir-table th,
+.kasir-table td {
+    font-size: 13px;
+    padding: 16px 18px;
+    vertical-align: middle;
+}
+
+.kasir-table th {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #94a3b8;
+    border-bottom: 1px solid #e2e8f0;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    background: transparent !important;
+}
+
+.kasir-table td {
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+.kasir-table tbody tr:hover td {
+    background-color: #f8fafc;
+}
+
+.kasir-table th.text-left,
+.kasir-table td.text-left {
+    text-align: left !important;
+}
+
+.kasir-table th.text-center,
+.kasir-table td.text-center {
+    text-align: center !important;
+}
+
+.kasir-table th.text-right,
+.kasir-table td.text-right {
+    text-align: right !important;
+}
+
+.cell-service-name {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.cell-price {
+    font-weight: 700;
+    color: #059669;
+}
+
+.action-buttons {
+    display: inline-flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-action {
+    padding: 7px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    color: #2563eb;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.btn-edit:hover {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.btn-delete {
+    color: #dc2626;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.btn-delete:hover {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f1f5f9;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ── DUKUNGAN MODE GELAP (DARK MODE) ── */
+body.dark-mode .section-container {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+}
+
+body.dark-mode .section-title {
+    color: #f8fafc !important;
+}
+
+body.dark-mode .kasir-table th {
+    background: transparent !important;
+    border-bottom-color: #334155 !important;
+    color: #94a3b8 !important;
+}
+
+body.dark-mode .kasir-table td {
+    border-bottom-color: #334155 !important;
+    color: #cbd5e1 !important;
+}
+
+body.dark-mode .kasir-table tbody tr:hover td {
+    background-color: rgba(51, 65, 85, 0.3) !important;
+}
+
+body.dark-mode .cell-service-name {
+    color: #f1f5f9 !important;
+}
+
+body.dark-mode .cell-price {
+    color: #34d399 !important;
+}
+
+body.dark-mode .btn-edit {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #93c5fd;
+}
+
+body.dark-mode .btn-edit:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+body.dark-mode .btn-delete {
+    background-color: #2a1215;
+    border-color: #4c1d24;
+    color: #fca5a5;
+}
+
+body.dark-mode .btn-delete:hover {
+    background-color: #4c1d24;
+    color: #ffffff;
+}
+
+body.dark-mode .table-footer {
+    border-top-color: #334155;
+    color: #94a3b8;
+}
+
+body.dark-mode .modal-content {
+    background: #121927;
+    border: 1px solid #1e293b;
+    color: #f1f5f9;
+}
+
+body.dark-mode .modal-content h3 {
+    color: #f1f5f9;
+}
+
+body.dark-mode .form-group label {
+    color: #e2e8f0;
+}
+
+body.dark-mode .form-group input {
+    background: #0b0f19;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+body.dark-mode .btn-cancel {
+    background: #1e293b;
+    color: #94a3b8;
+    border: 1px solid #334155;
+}

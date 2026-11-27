@@ -1,0 +1,195 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* CONTAINER UTAMA FULL SCREEN */
+.main-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+}
+
+/* PANEL KIRI (BIRU GRADIENT) */
+.panel-left {
+    flex: 0.9;
+    background: linear-gradient(135deg, #86BAF2 0%, #4D79C1 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 130px 70px;
+    color: white;
+    position: relative;
+    border-bottom-right-radius: 60px;
+    border-top-right-radius: 60px;
+    z-index: 2;
+}
+
+/* LOGO & HEADER */
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.logo-icon img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text h1 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-text p {
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.welcome-msg {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* PESAN ERROR/SUCCESS */
+.error-box {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid #ff4d4d;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #fff;
+    max-width: 550px;
+}
+
+.success-box {
+    background: rgba(0, 255, 0, 0.2);
+    border: 1px solid #4ade80;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #fff;
+    max-width: 550px;
+}
+
+/* FORM LOGIN / REGISTER */
+.login-form {
+    width: 100%;
+    max-width: 550px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.forgot-link {
+    text-align: right;
+    margin-top: -15px;
+    margin-bottom: 30px;
+}
+
+.forgot-link a {
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* TOMBOL MASUK / DAFTAR */
+.btn-submit {
+    width: 100%;
+    padding: 16px;
+    background-color: #1a4a8d;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #143a6e;
+    transform: translateY(-2px);
+}
+
+.footer-link {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    max-width: 550px;
+}
+
+.footer-link a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+/* PANEL KANAN (GAMBAR DOKTER) */
+.panel-right {
+    flex: 1;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doctor-img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .panel-right { display: none; }
+    .panel-left { border-radius: 0; padding: 40px; flex: 1; }
+}

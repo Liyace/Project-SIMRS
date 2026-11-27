@@ -1,0 +1,375 @@
+/* ============================================================
+   assets/css/login.css
+   Desain Otentikasi RS Delta - Modern, Proporsional, & Responsif
+   Digunakan oleh: resources/views/auth/login.blade.php & register.blade.php
+   ============================================================ */
+
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f0f6fd;
+    background-image: radial-gradient(#d5e6f8 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+/* CONTAINER UTAMA (CARD MODERN BERUKURAN PROPORSIONAL, TIDAK OVERFLOW/PENUH SELAYAR) */
+.auth-wrapper {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 580px;
+    background: #ffffff;
+    border-radius: 36px;
+    box-shadow: 0 25px 60px -15px rgba(26, 74, 141, 0.15), 0 0 0 1px rgba(188, 215, 247, 0.45);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* PANEL KIRI (BIRU GRADIENT RS DELTA) */
+.panel-left {
+    flex: 1.15;
+    background: linear-gradient(135deg, #7eb3f0 0%, #4D79C1 50%, #1a4a8d 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 50px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+/* TOMBOL KEMBALI KE BERANDA (LANDING PAGE) */
+.back-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    align-self: flex-start;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 25px;
+    backdrop-blur: 4px;
+    transition: all 0.25s ease;
+}
+
+.back-home-btn:hover {
+    background: rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    transform: translateX(-3px);
+}
+
+/* LOGO & HEADER */
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.logo-section a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+.logo-text h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.logo-text p {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.welcome-msg {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+/* NOTIFIKASI ERROR / SUKSES */
+.alert-box {
+    padding: 12px 16px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.4;
+}
+
+.alert-error {
+    background: rgba(239, 68, 68, 0.22);
+    border: 1px solid rgba(254, 202, 202, 0.5);
+    color: #fff;
+}
+
+.alert-success {
+    background: rgba(16, 185, 129, 0.22);
+    border: 1px solid rgba(167, 243, 208, 0.5);
+    color: #fff;
+}
+
+/* FORM STYLING */
+.auth-form {
+    width: 100%;
+}
+
+.input-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.2px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    outline: none;
+    font-size: 13px;
+    transition: all 0.25s ease;
+}
+
+.input-wrapper select option {
+    background: #1a4a8d;
+    color: white;
+}
+
+.input-wrapper input:focus,
+.input-wrapper select:focus {
+    background: rgba(255, 255, 255, 0.28);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+}
+
+/* Mencegah background kuning saat browser mencoba melakukan autofill */
+.input-wrapper input:-webkit-autofill,
+.input-wrapper input:-webkit-autofill:hover, 
+.input-wrapper input:-webkit-autofill:focus, 
+.input-wrapper input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.22) inset !important;
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* TOMBOL SUBMIT */
+.btn-submit {
+    width: 100%;
+    padding: 13px 20px;
+    background: #122e54;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(18, 46, 84, 0.35);
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #0d223f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(18, 46, 84, 0.45);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* FOOTER LINK SWITCHER (LOGIN <-> REGISTER) */
+.switch-mode-box {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.85);
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.switch-mode-box a {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 4px;
+    transition: opacity 0.2s;
+}
+
+.switch-mode-box a:hover {
+    opacity: 0.85;
+}
+
+/* PANEL KANAN (GAMBAR DOKTER DENGAN ANIMASI MENGAPUNG BEBAS TANPA KOTAK) */
+.panel-right {
+    flex: 0.95;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ANIMASI TURUN NAIK (FLOATING) DOKTER */
+@keyframes floatDoctor {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-16px);
+    }
+}
+
+@keyframes shadowPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.25;
+    }
+    50% {
+        transform: scale(0.85);
+        opacity: 0.12;
+    }
+}
+
+.doctor-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.doctor-img {
+    max-height: 420px;
+    width: auto;
+    object-fit: contain;
+    animation: floatDoctor 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.doctor-shadow {
+    width: 170px;
+    height: 14px;
+    background: radial-gradient(ellipse at center, rgba(26, 74, 141, 0.3) 0%, rgba(26, 74, 141, 0) 70%);
+    border-radius: 50%;
+    margin-top: -8px;
+    animation: shadowPulse 4s ease-in-out infinite;
+}
+
+/* BADGE HIGHLIGHT DOKTER */
+.doctor-badge-feature {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #e8f2fc;
+    color: #1a4a8d;
+    border: 1px solid #bcd7f7;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .auth-wrapper {
+        flex-direction: column;
+        max-width: 480px;
+        border-radius: 28px;
+    }
+
+    .panel-right {
+        display: none;
+    }
+
+    .panel-left {
+        padding: 35px 28px;
+    }
+
+    .input-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

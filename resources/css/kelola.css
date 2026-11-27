@@ -1,0 +1,67 @@
+
+.btn-add-layanan {
+    background-color: #2A67EC;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+}
+
+.btn-add-layanan:hover { background-color: #1e52ca; }
+
+.action-buttons { display: flex; gap: 10px; }
+
+.btn-action {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.btn-edit   { color: #2563eb; background-color: #f0f6ff; border: 1px solid #bfdbfe; }
+.btn-delete { color: #ef4444; background-color: #fef2f2; border: 1px solid #fecaca; }
+
+.text-right     { text-align: right; padding-right: 40px !important; }
+.th-right       { text-align: right !important; padding-right: 40px !important; }
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.pagination { display: flex; gap: 6px; list-style: none; }
+
+.page-item a,
+.page-item span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #64748b;
+    border: 1px solid #e2e8f0;
+}
+
+.page-item.active span {
+    background-color: #2A67EC;
+    color: #ffffff;
+    border-color: #2A67EC;
+    font-weight: 600;
+}

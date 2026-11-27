@@ -1,0 +1,263 @@
+/* ============================================================
+   assets/css/antrian.css
+   Digunakan oleh: pages/antrian.php
+   ============================================================ */
+
+.antrian-container {
+    display: grid;
+    grid-template-columns: 380px 1fr 340px;
+    gap: 20px;
+    padding: 0;
+}
+
+@media (max-width: 1200px) {
+    .antrian-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.panel {
+    background: #fff;
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    min-height: calc(100vh - 220px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.table-antrian {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table-antrian th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    color: #94a3b8;
+    padding: 12px 8px;
+    border-bottom: 2px solid #f1f5f9;
+    letter-spacing: 0.5px;
+}
+
+.table-antrian td {
+    padding: 15px 8px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13.5px;
+}
+
+.text-blue { color: #2563eb; font-weight: 600; }
+.text-poli { color: #64748b; font-size: 13px; }
+
+.btn-pilih {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #dbeafe;
+    padding: 6px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-pilih:hover { background: #2563eb; color: #fff; }
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.info-item { font-size: 13px; color: #334155; }
+
+.table-transaksi {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-transaksi th {
+    text-align: left;
+    font-size: 12px;
+    color: #64748b;
+    padding: 10px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.table-transaksi td {
+    padding: 10px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+}
+
+.subtotal-row { font-weight: bold; background: #f8fafc; }
+
+.btn-tambah {
+    background: #fff;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.btn-trash { color: #ef4444; cursor: pointer; text-align: center; }
+
+.info-note {
+    background: #eff6ff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #dbeafe;
+}
+
+h3 { font-size: 16px; margin-bottom: 5px; color: #0f172a; font-weight: 600; }
+.sub-desc { font-size: 13px; color: #64748b; margin-bottom: 20px; }
+
+/* MODAL */
+#modal-layanan,
+#modal-nota {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 14px;
+    width: 420px;
+    max-width: 90%;
+    text-align: left;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* ── DARK MODE DUKUNGAN UNTUK ANTRIAN KASIR ── */
+body.dark-mode .panel {
+    background: #121927;
+    border-color: #1e293b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode .panel h3 {
+    color: #f1f5f9;
+}
+
+body.dark-mode .panel .sub-desc {
+    color: #94a3b8;
+}
+
+body.dark-mode .table-antrian th,
+body.dark-mode .table-transaksi th {
+    background: #0b0f19;
+    border-bottom-color: #1e293b;
+    color: #94a3b8;
+}
+
+body.dark-mode .table-antrian td,
+body.dark-mode .table-transaksi td {
+    border-bottom-color: #1e293b;
+    color: #cbd5e1;
+}
+
+body.dark-mode .info-grid {
+    background: #0b0f19;
+    border: 1px solid #1e293b;
+}
+
+body.dark-mode .info-item {
+    color: #cbd5e1;
+}
+
+body.dark-mode .modal-content {
+    background: #121927;
+    border: 1px solid #1e293b;
+    color: #f1f5f9;
+}
+
+body.dark-mode .modal-content h3 {
+    color: #f1f5f9;
+}
+
+body.dark-mode .btn-pilih {
+    background: #1e293b;
+    border-color: #334155;
+    color: #93c5fd;
+}
+
+body.dark-mode .btn-pilih:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+body.dark-mode #val-total {
+    color: #60a5fa !important;
+}
+
+body.dark-mode #box-kembalian {
+    background: #0b0f19 !important;
+    border-color: #1e293b !important;
+}
+
+body.dark-mode #val-kembalian {
+    color: #34d399 !important;
+}
+
+body.dark-mode #input-tunai,
+body.dark-mode #select-layanan-api {
+    background: #0b0f19;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .info-note {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: #1e3a8a;
+    color: #93c5fd;
+}
+
+body.dark-mode .subtotal-row {
+    background: #0b0f19;
+    color: #f1f5f9;
+}
+
+body.dark-mode .btn-tambah {
+    background: #1e293b;
+    border-color: #3b82f6;
+    color: #93c5fd;
+}
+
+body.dark-mode .nota-box {
+    background: #0b0f19 !important;
+    border-color: #1e293b !important;
+    color: #cbd5e1;
+}

@@ -1,0 +1,81 @@
+.filter-container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon i {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #334155;
+    outline: none;
+    background-color: #ffffff;
+    transition: border-color 0.2s;
+}
+
+.filter-buttons { display: flex; gap: 12px; }
+
+.btn-filter-reset {
+    background-color: #ffffff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-filter-submit {
+    background-color: #2A67EC;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Override tabel untuk halaman riwayat */
+.kasir-table th,
+.kasir-table td { font-size: 12px; padding: 14px 10px; }
