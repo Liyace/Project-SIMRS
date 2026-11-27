@@ -1,10 +1,10 @@
 # SIMRS Delta — Sistem Informasi Manajemen Rumah Sakit Terpadu
 ### *Integrated Enterprise Hospital Management System & Patient Mobile Backend*
 
-[![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-13.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.2%2B-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
-[![Sanctum](https://img.shields.io/badge/API-Laravel_Sanctum-blue?style=for-the-badge)](https://laravel.com/docs/11.x/sanctum)
+[![Sanctum](https://img.shields.io/badge/API-Laravel_Sanctum-blue?style=for-the-badge)](https://laravel.com/docs/sanctum)
 [![Tests](https://img.shields.io/badge/Tests-103_Passed_(838_Assertions)-success?style=for-the-badge&logo=githubactions&logoColor=white)](#pengujian-otomatis-automated-testing)
 
 ---
@@ -13,7 +13,7 @@
 
 **SIMRS Delta** adalah aplikasi Sistem Informasi Manajemen Rumah Sakit (SIMRS) berbasis web dan REST API yang dirancang untuk mengotomatisasi dan mengintegrasikan seluruh siklus alur pelayanan rawat jalan rumah sakit secara *end-to-end* (mulai dari pendaftaran, skrining tanda vital, pemeriksaan dokter, peracikan obat farmasi, billing kasir, hingga portal mandiri pasien dan integrasi mobile).
 
-Dibangun dengan arsitektur modular menggunakan **Laravel 11**, sistem ini dilengkapi keamanan **Two-Factor Authentication (TOTP Google Authenticator)**, notifikasi real-time (*polling & audio chime*), sistem pemanggilan suara antrean ruang tunggu otomatis (*Text-to-Speech*), kartu pasien digital standar **CR80**, serta pengujian otomatis (*automated testing*) dengan tingkat ketahanan tinggi (**103 pengujian sukses**).
+Dibangun dengan arsitektur modular menggunakan **Laravel 13**, sistem ini dilengkapi keamanan **Two-Factor Authentication (TOTP Google Authenticator)**, notifikasi real-time (*polling & audio chime*), sistem pemanggilan suara antrean ruang tunggu otomatis (*Text-to-Speech*), kartu pasien digital standar **CR80**, serta pengujian otomatis (*automated testing*) dengan tingkat ketahanan tinggi (**103 pengujian sukses**).
 
 ---
 
@@ -200,5 +200,3 @@ php artisan test
 ---
 
 ## Lisensi & Kontribusi
-
-Proyek ini dikembangkan sebagai portofolio implementasi arsitektur sistem informasi enterprise (*Hospital Management Information System*). Lisensi terbuka di bawah [MIT License](LICENSE).
