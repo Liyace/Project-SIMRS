@@ -1,4 +1,4 @@
-# 🏥 SIMRS Delta — Sistem Informasi Manajemen Rumah Sakit Terpadu
+# SIMRS Delta — Sistem Informasi Manajemen Rumah Sakit Terpadu
 ### *Integrated Enterprise Hospital Management System & Patient Mobile Backend*
 
 [![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Ringkasan Proyek (Overview)
+## Ringkasan Proyek (Overview)
 
 **SIMRS Delta** adalah aplikasi Sistem Informasi Manajemen Rumah Sakit (SIMRS) berbasis web dan REST API yang dirancang untuk mengotomatisasi dan mengintegrasikan seluruh siklus alur pelayanan rawat jalan rumah sakit secara *end-to-end* (mulai dari pendaftaran, skrining tanda vital, pemeriksaan dokter, peracikan obat farmasi, billing kasir, hingga portal mandiri pasien dan integrasi mobile).
 
@@ -17,9 +17,9 @@ Dibangun dengan arsitektur modular menggunakan **Laravel 11**, sistem ini dileng
 
 ---
 
-## 🚀 Fitur Unggulan & Alur Pelayanan (Core Workflows)
+## Fitur Unggulan & Alur Pelayanan (Core Workflows)
 
-### 1. 🌐 Portal Pasien Terpadu (*Patient Self-Service Portal*)
+### 1. Portal Pasien Terpadu (*Patient Self-Service Portal*)
 - **Pendaftaran & Login Mandiri**: Pasien dapat mendaftar dan masuk menggunakan NIK, Nomor Rekam Medis (RM), atau Username.
 - **Dashboard Pasien**: Menampilkan status antrean aktif hari ini, panduan 4 alur poliklinik, dan ringkasan 3 kunjungan medis terakhir.
 - **Kartu Pasien Digital CR80**: Kartu identitas pasien digital interaktif dengan pratinjau sisi depan (*front*) dan belakang (*back*), barcode No. RM, serta tombol unduh/cetak fisik.
@@ -27,41 +27,41 @@ Dibangun dengan arsitektur modular menggunakan **Laravel 11**, sistem ini dileng
 - **Komparasi Kunjungan Medis**: Pasien dapat membandingkan perkembangan kesehatan antar kunjungan (tekanan darah sistol/diastol, suhu tubuh, berat badan, serta perubahan terapi obat).
 - **Pengaturan Profil**: Pasien dapat memperbarui nomor WhatsApp, alamat domisili, dan kata sandi (dengan penguncian proteksi pada NIK, No. RM, dan jenis kelamin).
 
-### 2. 🎫 Loket Pendaftaran & Admisi Pasien
+### 2. Loket Pendaftaran & Admisi Pasien
 - **Pendaftaran Pasien Walk-In**: Registrasi pasien baru dengan penomoran otomatis No. Rekam Medis (`RM-XXXX`) serta pencarian cepat pasien lama.
 - **Penerbitan Antrean Poliklinik**: Pemilihan poli tujuan, dokter yang bertugas, keluhan awal, dan cetak karcis antrean lengkap dengan barcode/QR.
 - **Cetak Kartu Fisik Pasien**: Penerbitan kartu berobat standar rumah sakit langsung dari loket.
 
-### 3. 🩺 Skrining Tanda Vital (TTV) — Perawat
+### 3. Skrining Tanda Vital (TTV) — Perawat
 - **Antrean Real-time**: Daftar antrean pasien yang menunggu pengukuran tanda-tanda vital dari loket.
 - **Pencatatan TTV Lengkap**: Tekanan darah (sistol/diastol), frekuensi nadi, suhu tubuh, laju napas, berat badan, tinggi badan, skala nyeri, dan keluhan utama.
 - **Notifikasi Lonceng & Suara**: Lonceng topbar interaktif dan lonceng audio yang berbunyi saat ada pasien baru masuk.
 
-### 4. 👨‍⚕️ Pelayanan Medis & E-Resep — Dokter Spesialis
+### 4. Pelayanan Medis & E-Resep — Dokter Spesialis
 - **Antrean Pasien Siap Periksa**: Pemanggilan pasien yang telah lolos skrining TTV.
 - **Akses Rekam Medis Masa Lalu**: Dokter dapat meninjau riwayat kunjungan dan diagnosa masa lalu pasien dalam satu layar.
 - **Input Diagnosa & Tindakan**: Diagnosa ICD-10, anamnesis, tindakan klinis, serta penerbitan E-Resep elektronik terhubung langsung ke bagian farmasi.
 - **Cetak Dokumen Medis**: Pembuatan dan cetak dokumen **Resume Medis Rawat Jalan** dan **Surat Keterangan Sakit** resmi berformat PDF.
 
-### 5. 💊 Instalasi Farmasi & Apotek — Apoteker
+### 5. Instalasi Farmasi & Apotek — Apoteker
 - **Antrean E-Resep Real-time**: Deteksi resep masuk seketika setelah diselesaikan oleh dokter.
 - **Telaah & Verifikasi Resep**: Verifikasi prinsip 5 Benar (Pasien, Obat, Dosis, Waktu, Cara Pemberian).
 - **Cetak Etiket Obat**: Cetak label aturan pakai obat untuk ditempelkan pada kemasan obat pasien.
 - **Manajemen Inventori & Stok Obat**: Katalog obat, stok masuk/keluar, peringatan stok menipis (*low-stock alert*), dan cetak laporan inventori obat PDF.
 - **Kontrol Penyerahan Obat**: Proteksi sistem di mana obat hanya dapat diserahkan setelah tagihan diselesaikan di kasir.
 
-### 6. 💳 Kasir & Billing Pembayaran
+### 6. Kasir & Billing Pembayaran
 - **Kalkulasi Billing Otomatis**: Perhitungan otomatis biaya pendaftaran poli, tindakan medis dokter, dan rincian obat dari farmasi.
 - **Multi-Metode Pembayaran**: Mendukung Tunai (dengan kalkulator kembalian), QRIS, Transfer Bank, dan Kartu Debit/Kredit.
 - **Cetak Struk Resmi**: Penerbitan bukti bayar/kuitansi kasir berformat struk thermal dan dokumen PDF.
 - **Laporan Finansial**: Rekapitulasi transaksi harian/bulanan dengan fitur ekspor ke **PDF** dan **Excel**.
 
-### 7. 📺 Monitoring Antrean & Layar Display TV — Resepsionis
+### 7. Monitoring Antrean & Layar Display TV — Resepsionis
 - **Journey Tracker**: Pemantauan alur perjalanan pasien dari loket hingga apotek/kasir secara terpadu.
 - **Display TV Antrean**: Tampilan layar lebar TV ruang tunggu yang memuat nomor antrean yang sedang dipanggil per poliklinik.
 - **Panggilan Suara Otomatis (TTS)**: Pemanggilan nomor antrean menggunakan suara sintesis (*Text-to-Speech*) berbahasa Indonesia ("*Nomor antrian UMU-001 silakan menuju Poli Umum*").
 
-### 8. 🛡️ Super Administrator RS
+### 8. Super Administrator RS
 - **Dashboard Eksekutif**: Grafik statistik kunjungan, rasio pasien baru vs lama, utilisasi poli, dan cetak laporan eksekutif PDF.
 - **Manajemen Staf & Pengguna**: Pendaftaran pegawai, penempatan poliklinik dokter, reset password, dan status proteksi 2FA.
 - **Menu Permintaan Reset Password & 2FA**: Halaman khusus penerimaan permohonan pemulihan akun dari pengguna yang terkunci, generator password baru, serta pengiriman pesan instan satu klik via **WhatsApp**.
@@ -70,7 +70,7 @@ Dibangun dengan arsitektur modular menggunakan **Laravel 11**, sistem ini dileng
 
 ---
 
-## 📱 Arsitektur RESTful API (Khusus Aplikasi Mobile Pasien)
+## Arsitektur RESTful API (Khusus Aplikasi Mobile Pasien)
 
 Sistem telah dilengkapi modul **REST API V1** yang diotentikasi menggunakan **Laravel Sanctum** (*Bearer Token*) sehingga siap langsung diintegrasikan dengan aplikasi mobile (Flutter, React Native, Kotlin, Swift):
 
@@ -92,7 +92,7 @@ Sistem telah dilengkapi modul **REST API V1** yang diotentikasi menggunakan **La
 
 ---
 
-## 🔒 Fitur Keamanan Sistem (Security Architecture)
+## Fitur Keamanan Sistem (Security Architecture)
 
 1. **Two-Factor Authentication (TOTP 2FA)**: Terintegrasi dengan aplikasi autentikator standar industri seperti *Google Authenticator*, *Microsoft Authenticator*, dan *Authy*.
 2. **Role-Based Access Control (RBAC)**: Pembatasan hak akses berbasis middleware kustom (`role:admin`, `role:dokter`, `role:perawat`, `role:kasir`, `role:apoteker`, `role:loket`, `role:resepsionis`).
@@ -100,7 +100,7 @@ Sistem telah dilengkapi modul **REST API V1** yang diotentikasi menggunakan **La
 
 ---
 
-## 🧪 Pengujian Otomatis (Automated Testing)
+## Pengujian Otomatis (Automated Testing)
 
 Proyek ini menerapkan standar *Test-Driven Development (TDD)* yang ketat menggunakan PHPUnit. Seluruh pengujian mencakup skenario otentikasi, alur pelayanan multi-pos, permission guard, hingga REST API mobile.
 
@@ -126,7 +126,7 @@ php artisan test
 
 ---
 
-## 💻 Panduan Instalasi Lokal (Setup Guide)
+## Panduan Instalasi Lokal (Setup Guide)
 
 ### Prasyarat
 - PHP >= 8.2 (dengan ekstensi `pdo_mysql`, `mbstring`, `openssl`, `bcmath`, `curl`)
@@ -176,7 +176,7 @@ php artisan test
 
 ---
 
-## 🔑 Akun Demo Pengujian (Default Credentials)
+## Akun Demo Pengujian (Default Credentials)
 
 *Seluruh akun di bawah menggunakan password default:* `12345`
 
@@ -199,6 +199,6 @@ php artisan test
 
 ---
 
-## 📄 Lisensi & Kontribusi
+## Lisensi & Kontribusi
 
 Proyek ini dikembangkan sebagai portofolio implementasi arsitektur sistem informasi enterprise (*Hospital Management Information System*). Lisensi terbuka di bawah [MIT License](LICENSE).
